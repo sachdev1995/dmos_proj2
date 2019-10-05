@@ -20,7 +20,7 @@ TCB_t *newQueue()
 TCB_t *NewItem()
 {
 	TCB_t *q = (TCB_t *)malloc (sizeof(TCB_t ));
-	//q->thread_id = ++count;
+	// q->thread_id = ++count;
 	q->next = NULL;
 	q->prev = NULL;
 	return q;

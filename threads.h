@@ -12,7 +12,7 @@ void start_thread(void (*function)(void))
 	stack_t *stack = (stack_t *)malloc( stack_size );
 	TCB_t *tcb = NewItem();
 	init_TCB(tcb,function,stack,stack_size);
-	tcb->thread_id = thread_count++; //TO DO
+	tcb->thread_id = thread_count++;
 	AddQueue(&ReadyQ,tcb);
 
 }
@@ -33,7 +33,12 @@ void yield() // similar to run
    AddQueue(&ReadyQ, Curr_Thread);
    Prev_Thread = Curr_Thread;
    Curr_Thread = DelQueue(&ReadyQ);
-   //swap the context, from Prev_Thread to the thread pointed to Curr_Thread
    swapcontext(&(Prev_Thread->context),&(Curr_Thread->context));
+}
+
+void get_threadId(TCB_t *tcb) {
+	if(tcb) {
+		printf("Thread Id is %d\n", tcb->thread_id);
+	}
 }
  
