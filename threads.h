@@ -38,7 +38,7 @@ void yield() // similar to run
 
 void get_threadId(TCB_t *tcb) {
 	if(tcb) {
-		printf("Thread Id is %d\n", tcb->thread_id);
+		printf("Thread Id is %d and ", tcb->thread_id);
 	}
 }
  
