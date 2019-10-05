@@ -1,10 +1,13 @@
+/*
+
+Bhupinder singh Sachdev / ASU ID: 1215098443
+Pavan raichur / ASU ID 1213378684: 
+
+*/
+
 #include "stdio.h"
 #include "stdlib.h"
 #include "TCB.h"
-
-
-
-int count = 0 ;
 
 
 
@@ -20,7 +23,7 @@ TCB_t *newQueue()
 TCB_t *NewItem()
 {
 	TCB_t *q = (TCB_t *)malloc (sizeof(TCB_t ));
-	// q->thread_id = ++count;
+	
 	q->next = NULL;
 	q->prev = NULL;
 	return q;

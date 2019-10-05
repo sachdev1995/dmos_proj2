@@ -1,3 +1,10 @@
+/*
+
+Bhupinder singh Sachdev / ASU ID: 1215098443
+Pavan raichur / ASU ID 1213378684: 
+
+*/
+
 #include "threads.h"
 
 int global_counter = 0;
@@ -28,10 +35,12 @@ void funct2(void)
 int main()
 {
 	printf("in main\n");
+	ReadyQ = newQueue();
 
 	start_thread(funct1);
 	start_thread(funct2);
 	start_thread(funct1);
+	start_thread(funct2);
 
 	run();
 	

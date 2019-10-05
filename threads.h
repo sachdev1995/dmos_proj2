@@ -1,3 +1,10 @@
+/*
+
+Bhupinder singh Sachdev / ASU ID: 1215098443
+Pavan raichur / ASU ID 1213378684: 
+
+*/
+
 #include "q.h"
 
 TCB_t *ReadyQ;
@@ -28,7 +35,7 @@ void run()
 
 }
 
-void yield() // similar to run
+void yield() 
 {  TCB_t *Prev_Thread;
    AddQueue(&ReadyQ, Curr_Thread);
    Prev_Thread = Curr_Thread;
