@@ -26,7 +26,7 @@ void funct2(void)
 	while(1)
 	{
 		get_threadId(Curr_Thread);
-		printf("in func2 global_counter = %d, local_counter = %d\n",global_counter++,local_counter++);
+		printf("in func2 global_counter func = %d, local_counter = %d\n",global_counter++,local_counter++);
 		yield();
 	}
 }
